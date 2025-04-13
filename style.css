@@ -548,7 +548,7 @@ html, body {
     display: flex;
     margin-top: 4vh;
     margin-bottom: 4vh;
-    gap: 40px;
+    gap: 13px;
 }
 #page5-content #flex h4:hover{
     background-color: #ffffff10; /* subtle light overlay */
