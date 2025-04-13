@@ -581,7 +581,9 @@ html, body {
 
 #page5-content h1 {
     font-size: 3vw;
-    font-weight: 500;
+    font-weight: 600;
+    color: #494949;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #page5-content #flex {
