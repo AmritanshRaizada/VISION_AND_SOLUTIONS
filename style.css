@@ -548,6 +548,13 @@ html, body {
     display: flex;
     margin-top: 4vh;
     margin-bottom: 4vh;
+    gap: 40px;
+}
+#page5-content #flex h4:hover{
+    background-color: #ffffff10; /* subtle light overlay */
+    color: #000000;
+    border-color: #000000aa;
+    transform: scale(1.08);
 }
 
 #page5-content #flex h4 {
