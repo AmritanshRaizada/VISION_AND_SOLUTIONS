@@ -473,13 +473,21 @@ html, body {
 }
 
 #blue-btn {
-    background-color: #4f5bff;
+    background: linear-gradient(to top, black 28%, #4f5bff 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
     width: 15vw;
     height: 3.5vw;
     border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-position 0.5s ease;
 }
 
 #blue-btn h4 {
@@ -487,15 +495,44 @@ html, body {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.85vw;
-    /* letter-spacing: 1px; */
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 1;
 }
 
 #blue-btn h4 i {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-weight: 100;
     margin-left: 0.5vw;
     color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: rotate(-45deg);
+    
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-position 0.5s ease;
 }
+
+/* Hover Effects */
+#blue-btn:hover {
+    transform: translateY(-0.3vw);
+    box-shadow: 0 0.5vw 1vw rgba(79, 91, 255, 0.4);
+    background-position: top;
+    
+}
+
+#blue-btn:hover h4 i {
+    /* transform: rotate(0deg) translate(0.3vw, -0.3vw); */
+    font-size: 1.2vw;
+    background: linear-gradient(to top, rgb(3, 1, 1) 28%, #4f5bff 100%);
+    
+    border-radius: 50%;
+    padding: 30px;
+}
+
 #page5 {
     min-height: 100vh;
     background-color: #111;
@@ -505,6 +542,7 @@ html, body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    
 }
 
 #page5 button {
@@ -524,6 +562,7 @@ html, body {
 
 #page5-right > p {
     font-size: 2.1vw;
+    
 }
 
 #page5-right > p span {
@@ -537,6 +576,7 @@ html, body {
     /* background-color: red; */
     margin-top: 5vh;
     padding: 5vh 0;
+
 }
 
 #page5-content h1 {
@@ -545,26 +585,35 @@ html, body {
 }
 
 #page5-content #flex {
+    padding-bottom: 8vh;
     display: flex;
     margin-top: 4vh;
+    width: 50vw;
     margin-bottom: 4vh;
-    gap: 13px;
+    gap: 18px;
 }
-#page5-content #flex h4:hover{
-    background-color: #ffffff10; /* subtle light overlay */
-    color: #000000;
-    border-color: #000000aa;
-    transform: scale(1.08);
-}
-
 #page5-content #flex h4 {
     border-radius: 50px;
-    border: 1px solid #000000;
-    padding: 10px 20px;
+    border: 1px solid #00000a; /* Border color matching the button's initial color */
+    padding: 12px 25px;
     font-weight: 400;
+    opacity: 50%;
     font-size: 0.8vw;
-
+    color: rgb(0, 0, 0);  /* Initial text color */
+    background: white;  /* Initial gradient background */
+    transition: transform 0.3s ease, background 0.5s ease, color 0.5s ease, border-color 0.5s ease, opacity 0.5s ease;
 }
+
+#page5-content #flex h4:hover {
+    background: linear-gradient(to top, #4f5bff 20%, black 90%);  /* Smooth linear gradient on hover */
+    color: white;  /* Text color remains white on hover */
+    border-color: #4f5bff;  /* Border becomes blue on hover */
+    transform: scale(1.08);  /* Slight scale effect */
+    font-weight: 800;
+    opacity: 100%;  /* Full opacity on hover */
+}
+
+
 
 #contacts {
     display: flex;
