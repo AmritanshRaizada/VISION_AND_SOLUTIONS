@@ -82,12 +82,6 @@ html, body {
     transform: scale(1.08);
 }
 
-/* #page1-something h4:nth-last-child(2) {
-    /* background-color: red; */
-    border: none;
-    padding: 4px;
-} */
-
 
 #minicircle {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
@@ -661,22 +655,24 @@ html, body {
 .page5-elem p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
-    width: 100%;
-    font-size: 0.8vw;
+    width: 50%;
+    font-size: 0.7vw;
     position: relative;
     z-index: 8;
     margin-left: 10vw;
 }
 
 .page5-elem h3 {
-    font-size: 1.2vw;
-    font-weight: 400;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 500;
     position: relative;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
     z-index: 8;
 }
 
 .page5-elem i {
+    padding-left: 30px;
     font-size: 1vw;
     position: relative;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
@@ -701,6 +697,7 @@ html, body {
 }
 
 .page5-elem:hover i {
+    transform: scale(1.3);
     padding-right: 1vw;
 }
 
