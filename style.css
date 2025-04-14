@@ -465,9 +465,11 @@ html, body {
 
 #page6-content #right-6 {
     width: 70%;
+    
 }
 
 #page6-content #right-6 p {
+    margin-left: 3vw ;
     font-size: 1.5vw;
     color: #ffffff;
     margin-bottom: 5vh;
@@ -475,7 +477,7 @@ html, body {
 }
 
 #blue-btn {
-    background: linear-gradient(to top, rgb(17, 17, 17) 10%, #4f5bff 70%);
+    background: linear-gradient(to top, rgb(17, 17, 17) 10%, #fd2b2b 70%);
     background-size: 100% 200%;
     background-position: bottom;
     width: 15vw;
@@ -522,7 +524,7 @@ html, body {
 /* Hover Effects */
 #blue-btn:hover {
     transform: translateY(-0.3vw);
-    box-shadow: 0 0.5vw 1vw rgba(79, 91, 255, 0.4);
+    box-shadow: 0 0.5vw 1vw rgba(255, 79, 79, 0.4);
     background-position: top;
     
 }
@@ -537,6 +539,7 @@ html, body {
 }
 
 #page5 {
+    
     min-height: 100vh;
     background-color: #111;
     width: 100%;
@@ -575,14 +578,17 @@ html, body {
 }
 
 #page5-content {
+    margin-left: 3vw ;
     width: 100%;
     /* background-color: red; */
     margin-top: 5vh;
+    
     padding: 5vh 0;
 
 }
 
 #page5-content h1 {
+    
     font-size: 3vw;
     font-weight: 600;
     color: #ffffff;
@@ -590,12 +596,12 @@ html, body {
 }
 
 #page5-content #flex {
-    padding-bottom: 8vh;
+    padding-bottom: 5vh;
     display: flex;
     margin-top: 4vh;
     width: 58vw;
     margin-bottom: 4vh;
-    gap: 13px;
+    
 }
 #page5-content #flex h4 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -604,8 +610,7 @@ html, body {
     border: 1px solid #ffffff; /* Border color matching the button's initial color */
     padding: 12px 25px;
     font-weight: 400;
-    opacity: 70%;
-    padding: 19px;
+    opacity: 90%;
     font-size: 0.8vw;
     letter-spacing: 1px;
     color: rgb(255, 255, 255);  /* Initial text color */
@@ -613,15 +618,15 @@ html, body {
     transition: transform 0.3s ease, background 0.5s ease, color 0.5s ease, border-color 0.5s ease, opacity 0.5s ease;
 }
 
-#page5-content #flex h4:hover {
-    background: linear-gradient(to top, #4f5bff 20%, black 90%);  /* Smooth linear gradient on hover */
-    color: white;  /* Text color remains white on hover */
-    border-color: #4f5bff;  /* Border becomes blue on hover */
-    transform: scale(1.08);  /* Slight scale effect */
+/* #page5-content #flex h4:hover {
+    background: linear-gradient(to top, #4f5bff 20%, black 90%);  
+    color: white;  
+    border-color: #4f5bff;  
+    transform: scale(1.08);  
     font-weight: 500;
-    
-    opacity: 100%;  /* Full opacity on hover */
-}
+    opacity: 100%; 
+} 
+*/
 
 
 
