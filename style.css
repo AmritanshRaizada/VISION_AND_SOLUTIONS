@@ -82,11 +82,11 @@ html, body {
     transform: scale(1.08);
 }
 
-#page1-something h4:nth-last-child(2) {
+/* #page1-something h4:nth-last-child(2) {
     /* background-color: red; */
     border: none;
     padding: 4px;
-}
+} */
 
 
 #minicircle {
