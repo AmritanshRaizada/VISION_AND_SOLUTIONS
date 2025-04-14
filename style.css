@@ -431,19 +431,21 @@ html, body {
     opacity: 1;
     transition: all 0.6s ease;
     color: #807d7d;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} 
+
 #page6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     min-height: 100vh;
     width: 100%;
     /* background-color: #111; */
-    background-color: #fff;
+    background-color: #0c0c0c;
     padding: 10vh 10vw;
 }
 
 #page6 > h1 {
     font-size: 5.5vw;
-    color: #000;
+    color:white;
     /* background-color: red; */
     padding-left: 23vw;
     padding-right: 5vw;
@@ -452,9 +454,10 @@ html, body {
     border-bottom: 1px solid #dadada;
 }
 
+
 #page6-content {
     /* background-color: red; */
-    color: #000;
+    color: white;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -466,14 +469,14 @@ html, body {
 }
 
 #page6-content #right-6 p {
-    font-size: 1.5vw;
-    color: #000;
+    font-size: 2.5vw;
+    color: white;
     margin-bottom: 5vh;
     width: 80%;
 }
 
 #blue-btn {
-    background: linear-gradient(to top, black 28%, #4f5bff 50%);
+    background: linear-gradient( rgba(255, 0, 0, 0.727) 50%);
     background-size: 100% 200%;
     background-position: bottom;
     width: 15vw;
@@ -496,6 +499,7 @@ html, body {
     font-weight: 600;
     font-size: 0.85vw;
     color: white;
+    
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;
@@ -507,8 +511,9 @@ html, body {
     font-weight: 100;
     margin-left: 0.5vw;
     color: white;
+    
     transition: transform 0.3s ease, color 0.3s ease;
-    transform: rotate(-45deg);
+    transform: rotate(10deg);
     
     transition: 
         transform 0.3s ease,
@@ -519,7 +524,7 @@ html, body {
 /* Hover Effects */
 #blue-btn:hover {
     transform: translateY(-0.3vw);
-    box-shadow: 0 0.5vw 1vw rgba(79, 91, 255, 0.4);
+    /* box-shadow: 0 0.5vw 1vw rgba(79, 91, 255, 0.4); */
     background-position: top;
     
 }
@@ -527,7 +532,7 @@ html, body {
 #blue-btn:hover h4 i {
     /* transform: rotate(0deg) translate(0.3vw, -0.3vw); */
     font-size: 1.2vw;
-    background: linear-gradient(to top, rgb(3, 1, 1) 28%, #4f5bff 100%);
+    /* background: linear-gradient(to top, rgb(3, 1, 1) 28%, #4f5bff 100%); */
     
     border-radius: 50%;
     padding: 30px;
@@ -582,7 +587,7 @@ html, body {
 #page5-content h1 {
     font-size: 3vw;
     font-weight: 600;
-    color: #494949;
+    color: ;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -608,13 +613,74 @@ html, body {
 }
 
 #page5-content #flex h4:hover {
-    background: linear-gradient(to top, #4f5bff 20%, black 90%);  /* Smooth linear gradient on hover */
-    color: white;  /* Text color remains white on hover */
-    border-color: #4f5bff;  /* Border becomes blue on hover */
-    transform: scale(1.08);  /* Slight scale effect */
+    /* background: linear-gradient(to top, #4f5bff 20%, black 90%);  Smooth linear gradient on hover */
+    /* color: white  Text color remains white on hover */
+    /* border-color: #4f5bff;  Border becomes blue on hover */
+    /* transform: scale(1.08);  Slight scale effect */
     font-weight: 800;
-    opacity: 100%;  /* Full opacity on hover */
+        opacity: 100%;   
 }
+#page7 {
+    font-family: sans-serif;
+    box-sizing:border-box;
+    height: max-content;
+    width: 100%;
+    background-color: #0c0c0c;
+
+  }
+  .testimonial-heading {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    color: white;
+    background-color: #0c0c0c; /* Adjust as needed */
+  }
+  
+  .testimonial-heading h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height:1vw;
+  }
+  
+  .testimonial-heading h1 {
+  text-decoration:solid ;
+    font-size: 46px;
+    font-weight: bold;
+    color: white; /* Lighter tone for subheading */
+  }
+  
+  .flex-container {
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    /* flex-direction:column; */
+    flex-wrap: wrap;
+
+  }
+  .flex-box {
+    
+    width:800px;
+    height:800px;
+    background:linear-gradient(rgba(128, 0, 128, 0.26));
+    color:white;
+    font-size:30px;
+    text-align:left;
+    line-height:70px;
+    border-radius:50px;
+    margin:70px;
+    
+  }
+  #flex-box img {
+    position: absolute;
+    top: 10px;  /* margin from top */
+    left: 60px; /* margin from left */
+    width: 40px; /* control image size */
+    height: auto;
+    
+  }
 
 
 
@@ -657,3 +723,4 @@ html, body {
     text-transform: uppercase;
     font-size: 0.9rem;
   }
+  
