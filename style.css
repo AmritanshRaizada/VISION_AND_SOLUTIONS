@@ -124,7 +124,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px 40px;
+     padding:  1 rem 0;  /* 20px 40px; */
     color: #fff;
 }
 #nav .logo {
@@ -432,17 +432,35 @@ html, body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #page6 {
-    min-height: 30vh;
+    min-height:100vh; /*30vh;*/
     width: 100%;
     /* background-color: #111; */
     background-color: #000000;
-    padding: 10vh 10vw;
+     padding:  2 rem; /*10vh 10vw; */
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+
 }
 
+/* #page6 > h1 { */
+    /* font-size: 5.5vw;
+    color: #ffffff;
+    /* background-color: red; */
+    /* padding-left: 20vw;
+    padding-right: 5vw;
+    line-height: 5.8vw;
+    padding-bottom: 10vh;
+    border-bottom: 1px solid #dadada;
+    /* letter-spacing: 1px; */
+    /* margin-right: 5vw;
+
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; */ */ */
+
+/* } */ 
 #page6 > h1 {
     font-size: 5.5vw;
     color: #ffffff;
-    /* background-color: red; */
     padding-left: 20vw;
     padding-right: 5vw;
     line-height: 5.8vw;
@@ -450,10 +468,21 @@ html, body {
     border-bottom: 1px solid #dadada;
     letter-spacing: 1px;
     margin-right: 5vw;
-
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
 }
+
+/* Media query for very tall screens like 1080x1920 */
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page6 > h1 {
+        font-size: 4.5vw;
+        line-height: 5vw;
+        padding-left: 10vw;
+        padding-right: 5vw;
+        padding-bottom: 6vh;
+        margin-right: 0;
+    }
+}
+
 
 #page6-content {
     /* background-color: red; */
@@ -468,6 +497,18 @@ html, body {
     width: 70%;
     
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page6-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        text-align: center;
+    }
+
+    #page6-content #right-6 {
+        width: 90%;
+    }
+}
 
 #page6-content #right-6 p {
     margin-left: 1.2vw ;
@@ -477,6 +518,17 @@ html, body {
     width: 80%;
     height: 11vh;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page6-content #right-6 p {
+        margin-left: 0;
+        font-size: 1rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.6;
+        margin-bottom: 2vh;
+    }
+}
+
 
 #blue-btn {
     background: linear-gradient(to bottom, rgb(17, 17, 17) 30%, #fd2b2b 80%);
@@ -496,6 +548,18 @@ html, body {
         box-shadow 0.3s ease,
         background-position 0.5s ease;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #blue-btn {
+        width: 60vw;
+        height: 7vh;
+        border-radius: 50px;
+    }
+
+    #blue-btn h4 {
+        font-size: 1.1rem;
+    }
+}
+
 
 #blue-btn h4 {
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -510,8 +574,17 @@ html, body {
     transition: transform 0.3s ease;
     z-index: 1;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #blue-btn h4 {
+        font-size: 1rem;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+    }
+}
 
-#blue-btn h4 i {
+
+/* #blue-btn h4 i {
     font-size: 1vw;
     font-weight: 100;
     margin-left: 0.5vw;
@@ -522,27 +595,65 @@ html, body {
     transition: 
         transform 0.3s ease,
         box-shadow 0.3s ease,
-        background-position 0.5s ease;
-}
+        background-position 0.5s ease; */
+        #blue-btn h4 i {
+            font-size: 1vw;
+            font-weight: 100;
+            margin-left: 0.5vw;
+            color: white;
+            transition: 
+                transform 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease,
+                background-position 0.5s ease;
+        }
+        
+        @media screen and (min-height: 1700px) and (max-width: 1100px) {
+            #blue-btn h4 i {
+                font-size: 1.2rem;
+                margin-left: 0.6rem;
+            }
+        }
+        
+
 
 /* Hover Effects */
-#blue-btn:hover {
+/* #blue-btn:hover {
     transform: translateY(-0.3vw);
     box-shadow: 0 0.5vw 1vw rgba(255, 79, 79, 0.4);
     background-position: top;
     
+} */
+#blue-btn:hover {
+    transform: translateY(-0.3vw);
+    box-shadow: 0 0.5vw 1vw rgba(255, 79, 79, 0.4);
+    background-position: top;
 }
 
+/* Responsive hover effect for tall/narrow screens */
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #blue-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(255, 79, 79, 0.4);
+    }
+}
+
+
 #blue-btn:hover h4 i {
-    /* transform: rotate(0deg) translate(0.3vw, -0.3vw); */
     font-size: 1.3vw;
     /* background: linear-gradient(to top, rgb(3, 1, 1) 28%, #4f5bff 100%); */
     
     border-radius: 50%;
     
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #blue-btn:hover h4 i {
+        font-size: 1.5rem;
+    }
+}
 
-#page5 {
+
+/* #page5 {
     min-height: 500vh;
     background-color: #000000;
     width: 100%;
@@ -552,7 +663,28 @@ html, body {
     align-items: flex-start;
     justify-content: space-between;
     
+} */
+#page5 {
+    min-height: 500vh;
+    background-color: #000000;
+    width: 100%;
+    position: relative;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
+
+/* Responsive for tall screens (1080x1920) */
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5 {
+        min-height: 200vh;  /* Adjusting height for tall screens */
+        flex-direction: column;  /* Stacks the content vertically */
+        justify-content: center; /* Centers content */
+        padding: 5vh 2vw; /* Adds padding for breathing space */
+    }
+}
+
 
 #page5 button {
     background-color: #0BA34E;
@@ -564,6 +696,13 @@ html, body {
     position: sticky;
     top: 15%;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5 button {
+        padding: 2.5vh 5vw;  /* Adjust padding for better spacing */
+        font-size: 1.2rem;  /* Use rem for font size */
+        top: 10%;  /* Adjust position to fit better */
+    }
+}
 
 #page5-right {
     width: 100%;
@@ -571,9 +710,20 @@ html, body {
     padding-right: 10vw;
     
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-right {
+        margin-left: 5vw;  /* Reduced margin for narrow screens */
+        padding-right: 5vw;  /* Adjust padding for better alignment */
+    }
+}
 
 #page5-right > p {
     font-size: 2vw;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-right > p {
+        font-size: 1.2rem;  /* Adjust font size for better readability */
+    }
 }
 
 #page5-right > p span {
@@ -582,21 +732,43 @@ html, body {
     color: white;
     display: inline-block;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-right > p span {
+        width: 80%;  /* Adjust width for better layout */
+        padding: 0 5vw;  /* Add some horizontal padding */
+    }
+}
 
 
 #page5-right {
     width: 70%;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-right {
+        width: 90%;  /* Adjust width for better layout */
+    }
 }
 
 #page5-elem p {
     font-size: 2vw;
     
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-elem p {
+        font-size: 1.2rem;  /* Adjust font size for better readability */
+    }
+}
 
 #page5-right > p span {
     /* background-color: red; */
     width: 15vw;
     display: inline-block;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-right > p span {
+        width: 30%;  /* Adjust width for better layout on mobile/portrait screens */
+        padding: 0 3vw;  /* Add horizontal padding for better spacing */
+    }
 }
 
 #page5-content {
@@ -605,6 +777,12 @@ html, body {
     margin-top: 5vh;
     color: white;
     /* padding: 5vh 0; */
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-content {
+        margin-top: 3vh;  /* Reduce margin for better alignment */
+        padding: 4vh 2vw;  /* Add some padding to ensure breathing space */
+    }
 }
 
 #page5-content h1 {
@@ -616,6 +794,12 @@ html, body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-content h1 {
+        font-size: 5vw;  /* Adjust font size for readability */
+        line-height: 6vw;  /* Adjust line height for better spacing */
+    }
+}
 
 #page5-content #flex {
     display: flex;
@@ -623,6 +807,13 @@ html, body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     margin-bottom: 2vh;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-content #flex {
+        margin-top: 2vh;  /* Reduced margin for better spacing on portrait screens */
+        margin-bottom: 1vh;  /* Adjust margin to fit the vertical space better */
+        flex-direction: column;  /* Stack flex items vertically for better layout */
+    }
 }
 
 #page5-content #flex h4 {
@@ -633,6 +824,12 @@ html, body {
     font-weight: 700;
     font-size: 0.65vw;
 
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page5-content #flex h4 {
+        font-size: 2.5vw;  /* Adjust font size for better readability */
+        padding: 12px 14px;  /* Increase padding for better spacing */
+    }
 }
 
 .page5-elem {
@@ -651,6 +848,13 @@ html, body {
     border-top: 1px solid #333;
     position: relative;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem {
+        flex-direction: column;  /* Stack flex items vertically for better layout */
+        padding-top: 4vh;  /* Adjust padding for better vertical spacing */
+        padding-bottom: 3vh;  /* Reduce padding for more space on the screen */
+    }
+}
 
 .page5-elem p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -661,6 +865,14 @@ html, body {
     z-index: 8;
     margin-left: 10vw;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem p {
+        width: 80%;  /* Increase width to make the text more readable */
+        font-size: 3.5vw;  /* Increase font size for better readability */
+        margin-left: 5vw;  /* Reduce margin-left for better alignment */
+        padding: 0 3vw;  /* Add padding for balanced layout */
+    }
+}
 
 .page5-elem h3 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -670,6 +882,12 @@ html, body {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
     z-index: 8;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem h3 {
+        font-size: 4.5vw;  /* Increase font size for better readability */
+        margin-top: 2vh;  /* Adjust margin for more balanced vertical spacing */
+    }
+}
 
 .page5-elem i {
     padding-left: 30px;
@@ -677,6 +895,12 @@ html, body {
     position: relative;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
     z-index: 8;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem i {
+        font-size: 3.5vw;  /* Increase font size for better visibility */
+        padding-left: 5vw;  /* Adjust padding for better alignment */
+    }
 }
 
 .over {
@@ -690,15 +914,32 @@ html, body {
     /* display: none; */
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .over {
+        /* Optional: Adjust transform if needed for specific behavior */
+        transform: translateY(-50%);  /* Optional: Move overlay less to ensure it works on tall screens */
+    }
+}
 
 .page5-elem:hover h3 {
     padding-left: 1vw;
 
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem:hover h3 {
+        padding-left: 3vw;  /* Increase padding to ensure better spacing on narrow screens */
+    }
+}
 
 .page5-elem:hover i {
     transform: scale(1.3);
     padding-right: 1vw;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem:hover i {
+        transform: scale(1.5);  /* Increase the scale slightly for better visibility */
+        padding-right: 2vw;  /* Increase padding for more balanced spacing */
+    }
 }
 
 .page5-elem:hover .over {
@@ -706,9 +947,21 @@ html, body {
     /* display: initial; */
     opacity: 1;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem:hover .over {
+        transform: translateY(0);  /* Keep the overlay at the correct position */
+        opacity: 1;  /* Ensure the overlay is visible */
+        transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s ease;  /* Adjust transition for smoother appearance */
+    }
+}
 
 .page5-elem:hover {
     border-top: 2px solid #fff;
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .page5-elem:hover {
+        border-top: 2px solid #fff;  /* Keep the same border but adjust behavior for narrower screens */
+    }
 }
 
 
@@ -725,6 +978,12 @@ summary::marker {
     width: 50vw;
     border-top: 1px solid #333;
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .product {
+        width: 70vw;  /* Increase width for taller screens, ensure it's not too narrow */
+        padding: 4vh 0;  /* Adjust padding for more spacing */
+    }
+}
 
 .product::before {
     content: '';
@@ -738,10 +997,21 @@ summary::marker {
     transition: width 0.4s ease, left 0.4s ease;
     transform: translateX(-50%);
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .product::before {
+        height: 4px;  /* Slightly increase the height of the line for better visibility */
+        transition: width 0.4s ease, left 0.4s ease, height 0.4s ease;  /* Add height transition */
+    }
+}
 
 .product:hover::before {
     width: 100%;
     
+}
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    .product:hover::before {
+        width: 100%;  /* The width remains 100% on hover, but we ensure smooth transition */
+    }
 }
 .testimonial-heading {
     text-align: center;
