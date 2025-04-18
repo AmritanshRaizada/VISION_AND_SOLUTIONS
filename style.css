@@ -143,7 +143,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-     padding:  1 rem 0;  /* 20px 40px; */
+    padding: 20px 40px;
     color: #fff;
 }
 #nav .logo {
@@ -481,35 +481,17 @@ html, body {
 }
 
 #page6 {
-    min-height:100vh; /*30vh;*/
+    min-height: 30vh;
     width: 100%;
     /* background-color: #111; */
     background-color: #000000;
-     padding:  2 rem; /*10vh 10vw; */
-     display:flex;
-     flex-direction:column;
-     align-items:center;
-
+    padding: 10vh 10vw;
 }
 
-/* #page6 > h1 { */
-    /* font-size: 5.5vw;
-    color: #ffffff;
-    /* background-color: red; */
-    /* padding-left: 20vw;
-    padding-right: 5vw;
-    line-height: 5.8vw;
-    padding-bottom: 10vh;
-    border-bottom: 1px solid #dadada;
-    /* letter-spacing: 1px; */
-    /* margin-right: 5vw;
-
-    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; */ */ */
-
-/* } */ 
 #page6 > h1 {
     font-size: 5.5vw;
     color: #ffffff;
+    /* background-color: red; */
     padding-left: 20vw;
     padding-right: 5vw;
     line-height: 5.8vw;
@@ -517,21 +499,10 @@ html, body {
     border-bottom: 1px solid #dadada;
     letter-spacing: 1px;
     margin-right: 5vw;
+
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
 
-/* Media query for very tall screens like 1080x1920 */
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #page6 > h1 {
-        font-size: 4.5vw;
-        line-height: 5vw;
-        padding-left: 10vw;
-        padding-right: 5vw;
-        padding-bottom: 6vh;
-        margin-right: 0;
-    }
 }
-
 
 #page6-content {
     /* background-color: red; */
@@ -546,18 +517,6 @@ html, body {
     width: 70%;
     
 }
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #page6-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 3vh;
-        text-align: center;
-    }
-
-    #page6-content #right-6 {
-        width: 90%;
-    }
-}
 
 #page6-content #right-6 p {
     margin-left: 1.2vw ;
@@ -567,17 +526,6 @@ html, body {
     width: 80%;
     height: 11vh;
 }
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #page6-content #right-6 p {
-        margin-left: 0;
-        font-size: 1rem;
-        width: 100%;
-        height: auto;
-        line-height: 1.6;
-        margin-bottom: 2vh;
-    }
-}
-
 
 #blue-btn {
     background: linear-gradient(to bottom, rgb(17, 17, 17) 30%, #fd2b2b 80%);
@@ -597,18 +545,6 @@ html, body {
         box-shadow 0.3s ease,
         background-position 0.5s ease;
 }
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #blue-btn {
-        width: 60vw;
-        height: 7vh;
-        border-radius: 50px;
-    }
-
-    #blue-btn h4 {
-        font-size: 1.1rem;
-    }
-}
-
 
 #blue-btn h4 {
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -623,17 +559,8 @@ html, body {
     transition: transform 0.3s ease;
     z-index: 1;
 }
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #blue-btn h4 {
-        font-size: 1rem;
-        position: relative;
-        justify-content: center;
-        text-align: center;
-    }
-}
 
-
-/* #blue-btn h4 i {
+#blue-btn h4 i {
     font-size: 1vw;
     font-weight: 100;
     margin-left: 0.5vw;
@@ -644,75 +571,72 @@ html, body {
     transition: 
         transform 0.3s ease,
         box-shadow 0.3s ease,
-        background-position 0.5s ease; */
-        #blue-btn h4 i {
-            font-size: 1vw;
-            font-weight: 100;
-            margin-left: 0.5vw;
-            color: white;
-            transition: 
-                transform 0.3s ease,
-                color 0.3s ease,
-                box-shadow 0.3s ease,
-                background-position 0.5s ease;
-        }
-        
-        @media screen and (min-height: 1700px) and (max-width: 1100px) {
-            #blue-btn h4 i {
-                font-size: 1.2rem;
-                margin-left: 0.6rem;
-            }
-        }
-        
-
+        background-position 0.5s ease;
+}
 
 /* Hover Effects */
-/* #blue-btn:hover {
-    transform: translateY(-0.3vw);
-    box-shadow: 0 0.5vw 1vw rgba(255, 79, 79, 0.4);
-    background-position: top;
-    
-} */
 #blue-btn:hover {
     transform: translateY(-0.3vw);
     box-shadow: 0 0.5vw 1vw rgba(255, 79, 79, 0.4);
     background-position: top;
+    
 }
-
-/* Responsive hover effect for tall/narrow screens */
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #blue-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(255, 79, 79, 0.4);
-    }
-}
-
 
 #blue-btn:hover h4 i {
+    /* transform: rotate(0deg) translate(0.3vw, -0.3vw); */
     font-size: 1.3vw;
     /* background: linear-gradient(to top, rgb(3, 1, 1) 28%, #4f5bff 100%); */
     
     border-radius: 50%;
     
 }
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    #blue-btn:hover h4 i {
-        font-size: 1.5rem;
+@media screen and (max-width: 1080px) and (min-height: 1700px) {
+    #page6 {
+        padding: 8vh 6vw;
+    }
+
+    #page6 > h1 {
+        font-size: 6.5vw;
+        line-height: 7vw;
+        padding-left: 10vw;
+        padding-right: 3vw;
+        padding-bottom: 6vh;
+        margin-left:100px;
+    }
+
+    #blue-btn {
+        width: 40vw;
+        height: 8vw;
+    }
+
+    #blue-btn h4 {
+        font-size: 2.5vw;
+    }
+
+    #blue-btn h4 i {
+        font-size: 3vw;
+        margin-left: 1vw;
+    }
+
+    #page6-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #page6-content #right-6 {
+        width: 100%;
+    }
+
+    #page6-content #right-6 p {
+        font-size: 2.8vw;
+        width: 90%;
+        margin-left: 0;
+        padding-top:30px;
+        margin-top:20px;
+        text-align: center;
     }
 }
 
-
-/* #page5 {
-    min-height: 500vh;
-    background-color: #000000;
-    width: 100%;
-    position: relative;
-    
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    
-} */
 #page5 {
     min-height: 500vh;
     background-color: #000000;
@@ -754,7 +678,7 @@ html, body {
 }
 
 #page5-right {
-    width: 100%;
+    width: 120%;
     margin-left: 35vw;
     padding-right: 10vw;
     
@@ -830,7 +754,9 @@ html, body {
 @media screen and (min-height: 1700px) and (max-width: 1100px) {
     #page5-content {
         margin-top: 3vh;  /* Reduce margin for better alignment */
-        padding: 4vh 2vw;  /* Add some padding to ensure breathing space */
+        padding: 4vh 2vw;
+          /* Add some padding to ensure breathing space */
+          width:100%;
     }
 }
 
@@ -855,10 +781,12 @@ html, body {
     margin-top: 4vh;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+
     margin-bottom: 2vh;
 }
 @media screen and (min-height: 1700px) and (max-width: 1100px) {
     #page5-content #flex {
+        width:100%;
         margin-top: 2vh;  /* Reduced margin for better spacing on portrait screens */
         margin-bottom: 1vh;  /* Adjust margin to fit the vertical space better */
         flex-direction: column;  /* Stack flex items vertically for better layout */
@@ -876,7 +804,9 @@ html, body {
 }
 @media screen and (min-height: 1700px) and (max-width: 1100px) {
     #page5-content #flex h4 {
-        font-size: 2.5vw;  /* Adjust font size for better readability */
+        font-size: 2.5vw; 
+         /* Adjust font size for better readability */
+        
         padding: 12px 14px;  /* Increase padding for better spacing */
     }
 }
@@ -899,8 +829,10 @@ html, body {
 }
 @media screen and (min-height: 1700px) and (max-width: 1100px) {
     .page5-elem {
+        width:200%;
+        
         flex-direction: column;  /* Stack flex items vertically for better layout */
-        padding-top: 4vh;  /* Adjust padding for better vertical spacing */
+        padding-top: 2vh;  /* Adjust padding for better vertical spacing */
         padding-bottom: 3vh;  /* Reduce padding for more space on the screen */
     }
 }
@@ -916,7 +848,7 @@ html, body {
 }
 @media screen and (min-height: 1700px) and (max-width: 1100px) {
     .page5-elem p {
-        width: 80%;  /* Increase width to make the text more readable */
+        width: 100%;  /* Increase width to make the text more readable */
         font-size: 3.5vw;  /* Increase font size for better readability */
         margin-left: 5vw;  /* Reduce margin-left for better alignment */
         padding: 0 3vw;  /* Add padding for balanced layout */
@@ -954,7 +886,7 @@ html, body {
 
 .over {
     height: 100%;
-    width: 100%;
+    width: 140%;
     background-color: #222;
     position: absolute;
     top: 0;
@@ -1015,6 +947,7 @@ html, body {
 
 
 
+
 summary::marker {
     content: "";
 }
@@ -1026,12 +959,6 @@ summary::marker {
     padding: 3vh 0;
     width: 50vw;
     border-top: 1px solid #333;
-}
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    .product {
-        width: 70vw;  /* Increase width for taller screens, ensure it's not too narrow */
-        padding: 4vh 0;  /* Adjust padding for more spacing */
-    }
 }
 
 .product::before {
@@ -1046,21 +973,10 @@ summary::marker {
     transition: width 0.4s ease, left 0.4s ease;
     transform: translateX(-50%);
 }
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    .product::before {
-        height: 4px;  /* Slightly increase the height of the line for better visibility */
-        transition: width 0.4s ease, left 0.4s ease, height 0.4s ease;  /* Add height transition */
-    }
-}
 
 .product:hover::before {
     width: 100%;
     
-}
-@media screen and (min-height: 1700px) and (max-width: 1100px) {
-    .product:hover::before {
-        width: 100%;  /* The width remains 100% on hover, but we ensure smooth transition */
-    }
 }
 .testimonial-heading {
     text-align: center;
@@ -1202,4 +1118,4 @@ summary::marker {
     width: 100%;
     background-color: #0c0c0c; */
 
-  /* } */                                                                       
+  /* } */
