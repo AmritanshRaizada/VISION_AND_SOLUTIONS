@@ -743,32 +743,16 @@ summary::marker {
     width: 100%;
     
 }
-
-/* #page5-content #flex h4:hover {
-    background: linear-gradient(to top, #4f5bff 20%, black 90%);  
-    color: white;  
-    border-color: #4f5bff;  
-    transform: scale(1.08);  
-    font-weight: 500;
-    opacity: 100%; 
-/* }  */
-    #page7 {
-    font-family: sans-serif; 
-    box-sizing:border-box;
-    height: max-content;
-    width: 100%;
-    background-color: #0c0c0c;
-
-  } */
-  .testimonial-heading {
+.testimonial-heading {
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 80px 40px 40px 40px;
     color: white;
+    
     background-color: #0c0c0c; /* Adjust as needed */
   }
   
   .testimonial-heading h2 {
-    font-size: 26px;
+    font-size: 36px;
     margin-bottom: 10px;
     font-weight: 400;
     line-height:1vw;
@@ -776,7 +760,7 @@ summary::marker {
   
   .testimonial-heading h1 {
   text-decoration:solid ;
-    font-size: 46px;
+    font-size: 66px;
     font-weight: bold;
     color: white; /* Lighter tone for subheading */
   }
@@ -787,32 +771,55 @@ summary::marker {
     display:flex;
     justify-content:space-around;
     align-items:center;
+    
+
 
     /* flex-direction:column; */
     flex-wrap: wrap;
+    gap:10px;
 
   }
+  
   .flex-box {
     
     width:800px;
     height:800px;
-    background:linear-gradient(rgba(128, 0, 128, 0.26));
+    /* background:linear-gradient(rgba(128, 0, 128, 0.26)); */
     color:white;
+    background-color:#0c0c0c;
+    border-color: #dadada;
     font-size:30px;
-    text-align:left;
+    text-align:center;
     line-height:70px;
     border-radius:50px;
     margin:70px;
+    display:flex;
+    flex-wrap:wrap;
+    .star-rating {
+        text-align: center;
+        margin: 10px 0;
+      }
+      
+     
+      
     
   }
-  #flex-box img {
-    position: absolute;
-    top: 10px;  /* margin from top */
-    left: 60px; /* margin from left */
-    width: 40px; /* control image size */
-    height: auto;
+  .flex-box img {
+    /* position: absolute; */
+    top: 50px;  /* margin from top */
+    left: 50px; /* margin from left */
+    width: 150px; /* control image size */
+    height: 150px;
+    border-radius:50%;
     
   }
+  .star-rating  .star {
+    font-size: 46px;
+    color: gold;
+    padding: 0 2px;
+    text-align: right;
+  }
+  
 
   
 
@@ -857,3 +864,20 @@ summary::marker {
     text-transform: uppercase;
     font-size: 0.9rem;
   }
+
+/* #page5-content #flex h4:hover {
+    background: linear-gradient(to top, #4f5bff 20%, black 90%);  
+    color: white;  
+    border-color: #4f5bff;  
+    transform: scale(1.08);  
+    font-weight: 500;
+    opacity: 100%; 
+/* }  */
+    /* #page7 {
+    font-family: sans-serif; 
+    box-sizing:border-box;
+    height: max-content;
+    width: 100%;
+    background-color: #0c0c0c; */
+
+  /* } */                                                                       
