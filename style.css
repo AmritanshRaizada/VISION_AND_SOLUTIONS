@@ -867,7 +867,7 @@ Default styles for all screens
 @media screen and (max-width: 768px) {
     #page5-right {
         width: 100%;
-        margin-left: 24vw;
+        margin-left: 26vw;
         /* padding-right: 10vw; */
     }
     #page5 {
