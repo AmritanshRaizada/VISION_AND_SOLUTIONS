@@ -59,7 +59,12 @@ html, body {
         padding-bottom: 10px;
     }
 }
-
+@media screen and (max-width: 768px) {
+    #hero p {
+        font-size: 5vw; /* slightly larger on smaller screens */
+        padding-bottom: 10px;
+    }
+}
 #page1-something {
     display: flex;
     align-items: center;
@@ -91,6 +96,19 @@ html, body {
         font-size: 3vw;
         margin-top: 2vw;
         padding: 12px 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #page1-something {
+        flex-direction: column;
+        padding-bottom: 80px; /* slightly reduced for smaller screens */
+        gap: 16px;
+    }
+
+    #page1-something h4 {
+        font-size: 5vw; /* increased size for readability */
+        margin-top: 4vw;
+        padding: 10px 24px;
     }
 }
 
@@ -158,6 +176,14 @@ html, body {
     }
 }
 
+@media screen and (max-width: 768px) {
+    #nav .logo {
+        height: auto;  /* Allow height to scale proportionally */
+        width: 30vw;   /* Set width to 15% of the viewport width */
+        border-radius: 50%;
+        /* width: 40vw; wider on smaller screens for visibility */
+    }
+}
 
 #nav a {
     text-decoration: none;
@@ -223,6 +249,27 @@ html, body {
         border-radius: 10px;
     }
 }
+@media screen and (max-width: 768px) {
+    #nav a {
+        font-size: 4vw; /* larger for easier tapping */
+    }
+
+    .nav-buttons {
+        top: 16px;
+        right: 8px;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-btn {
+        
+        padding: 7px 5px;
+        font-size: 2.7vw;
+        border-radius: 4px;
+    }
+}
+
 
 
   
@@ -479,6 +526,33 @@ html, body {
         font-size: 2.5vw; /* Increased font size for h5 */
     }
 }
+@media screen and (max-width: 768px) {
+    .elem,
+    .elem1 {
+        height: 20vh;
+        margin: 0;
+        padding: 0 7vw;
+        align-items: center;
+        font-size: 1.3rem; /* Increased font size */
+    }
+
+    .elemlast {
+        border-bottom: 1px solid #888;
+        font-size: 1.3rem; /* Increased font size for consistency */
+    }
+    .elem h1 {
+        font-size: 4vw; /* Increased font size for h1 */
+    }
+    .elem h5 {
+        font-size: 2.5vw; /* Increased font size for h5 */
+    }
+    .elem1 h1 {
+        font-size: 4vw; /* Increased font size for h1 */
+    }
+    .elem1 h5 {
+        font-size: 2.5vw; /* Increased font size for h5 */
+    }
+}
 
 #page6 {
     min-height: 30vh;
@@ -590,37 +664,38 @@ html, body {
     border-radius: 50%;
     
 }
-@media screen and (max-width: 1080px) and (min-height: 1700px) {
+@media screen and (max-width: 768px) {
     #page6 {
-        padding: 8vh 6vw;
+        padding: 6vh 5vw;
     }
 
     #page6 > h1 {
-        font-size: 6.5vw;
-        line-height: 7vw;
-        padding-left: 10vw;
-        padding-right: 3vw;
-        padding-bottom: 6vh;
-        margin-left:100px;
+        font-size: 7vw;
+        line-height: 8vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 4vh;
+        margin-left: 11vw; /* remove margin to center align better */
+        margin-right: 10vw;
     }
 
     #blue-btn {
-        width: 40vw;
-        height: 8vw;
+        width: 60vw;
+        height: 10vw;
     }
 
     #blue-btn h4 {
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
 
     #blue-btn h4 i {
-        font-size: 3vw;
-        margin-left: 1vw;
+        font-size: 5vw;
+        margin-left: 2vw;
     }
 
     #page6-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* center content on smaller screens */
     }
 
     #page6-content #right-6 {
@@ -628,14 +703,14 @@ html, body {
     }
 
     #page6-content #right-6 p {
-        font-size: 2.8vw;
+        font-size: 4vw;
         width: 90%;
-        margin-left: 0;
-        padding-top:30px;
-        margin-top:20px;
+        margin: 20px auto 0;
+        padding-top: 20px;
         text-align: center;
     }
 }
+
 /* ===== DEFAULT STYLES ===== */
 #page5 {
     min-height: 500vh;
@@ -774,81 +849,100 @@ summary::marker {
 }
 
 
-/* ===== MEDIA QUERY FOR 1080x1920 ===== */
-@media screen and (max-width: 1080px) and (min-height: 1920px) {
+Default styles for all screens
+#page5 {
+    display: flex;
+    min-height: 100vh;
+    padding: 4vh 4vw;
+}
+
+#page5-right {
+    width: 100%;
+    margin-left: auto;
+    margin-left: 35vw;
+}
+
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    #page5-right {
+        width: 100%;
+        margin-left: 20vw;
+        /* padding-right: 10vw; */
+    }
     #page5 {
-        min-height: 200vh;
+        min-height: auto;
         flex-direction: column;
         justify-content: center;
-        padding: 5vh 2vw;
     }
 
     #page5 button {
-        padding: 2.5vh 5vw;
-        font-size: 1.2rem;
-        top: 10%;
-    }
-
-    #page5-right {
-        width: 90%;
-        margin-left: 5vw;
-        padding-right: 5vw;
+        padding: 2vh 6vw;
+        font-size: 0.9rem;
+        top: auto;
     }
 
     #page5-right > p {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        text-align: center;
     }
 
     #page5-right > p span {
-        width: 80%;
-        padding: 0 5vw;
+        display: inline-block;
+        width: 100%;
+        padding: 0 4vw;
     }
 
     #page5-content {
-        margin-top: 3vh;
-        padding: 4vh 2vw;
+        margin-top: 2vh;
+        padding: 4vh 1vw;
         width: 100%;
     }
 
     #page5-content h1 {
         font-size: 5vw;
         line-height: 6vw;
+        text-align: center;
     }
 
     #page5-content #flex {
         width: 100%;
-        margin-top: 2vh;
-        margin-bottom: 1vh;
+        margin: 1vh 0;
         flex-direction: column;
     }
 
     #page5-content #flex h4 {
-        font-size: 2.5vw;
-        padding: 12px 14px;
+        font-size: 3.6vw;
+        padding: 8px 10px;
+        text-align: center;
     }
 
     .page5-elem {
-        width: 200%;
+        width: 100%;
         flex-direction: column;
-        padding-top: 2vh;
-        padding-bottom: 3vh;
+        padding: 2vh 0;
     }
 
     .page5-elem p {
         width: 100%;
-        font-size: 3.5vw;
-        margin-left: 5vw;
-        padding: 0 3vw;
+        font-size: 1.8vw;
+        margin-left: 0;
+        padding: 0 4vw;
+        text-align: center;
     }
 
     .page5-elem h3 {
-        font-size: 4.5vw;
+        font-size: 4.3vw;
         margin-top: 2vh;
+        text-align: center;
     }
 
     .page5-elem i {
         font-size: 3.5vw;
-        padding-left: 5vw;
+        padding-left: 0;
+        display: block;
+        text-align: center;
+        margin-top: 1vh;
     }
 
     .over {
@@ -856,11 +950,11 @@ summary::marker {
     }
 
     .page5-elem:hover h3 {
-        padding-left: 3vw;
+        padding-left: 2vw;
     }
 
     .page5-elem:hover i {
-        transform: scale(1.5);
+        transform: scale(1.2);
         padding-right: 2vw;
     }
 
@@ -874,6 +968,7 @@ summary::marker {
         border-top: 2px solid #fff;
     }
 }
+
 
 .product {
     position: relative;
