@@ -867,7 +867,7 @@ Default styles for all screens
 @media screen and (max-width: 768px) {
     #page5-right {
         width: 100%;
-        margin-left: 20vw;
+        margin-left: 24vw;
         /* padding-right: 10vw; */
     }
     #page5 {
@@ -895,7 +895,7 @@ Default styles for all screens
 
     #page5-content {
         margin-top: 2vh;
-        padding: 4vh 1vw;
+        padding: 6vh 1vw;
         width: 100%;
     }
 
@@ -909,10 +909,11 @@ Default styles for all screens
         width: 100%;
         margin: 1vh 0;
         flex-direction: column;
+        gap: 1vh;
     }
 
     #page5-content #flex h4 {
-        font-size: 3.6vw;
+        font-size: 3vw;
         padding: 8px 10px;
         text-align: center;
     }
@@ -920,7 +921,7 @@ Default styles for all screens
     .page5-elem {
         width: 100%;
         flex-direction: column;
-        padding: 2vh 0;
+        padding: 3vh 0;
     }
 
     .page5-elem p {
