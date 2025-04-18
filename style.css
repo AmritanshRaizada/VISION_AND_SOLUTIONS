@@ -491,6 +491,12 @@ html, body {
      align-items:center;
 
 }
+@media screen and (min-height: 1700px) and (max-width: 1100px) {
+    #page6 {
+        padding: 3rem; /* Increase padding for better spacing on tall screens */
+        min-height: 80vh; /* Adjust height for tall/narrow screens to avoid excess empty space */
+    }
+}
 
 /* #page6 > h1 { */
     /* font-size: 5.5vw;
