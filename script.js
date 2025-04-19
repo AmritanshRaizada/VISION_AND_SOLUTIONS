@@ -163,6 +163,16 @@ function page6Animations() {
     }
   });
 }
+const dropdown = document.querySelector(".dropdown");
+const backdrop = document.querySelector("#nav-backdrop");
+
+dropdown.addEventListener("mouseenter", () => {
+  backdrop.style.display = "block";
+});
+
+dropdown.addEventListener("mouseleave", () => {
+  backdrop.style.display = "none";
+});
 
 
 // Init Everything

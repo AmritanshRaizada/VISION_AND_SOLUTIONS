@@ -210,11 +210,66 @@ nav {
     margin-left: 36vw;
 }
 
+
 .nav-elem {
     position: relative;
     cursor: pointer;
 }
-
+/* Dropdown base style */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 4.5vw;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 1vw;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 0.5vw;
+    z-index: 999;
+    width: max-content;
+    min-width: 15vw;
+  }
+  
+  .dropdown-menu p {
+    font-size: 0.73vw;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.3vw 0.5vw;
+    white-space: nowrap;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-menu p:hover {
+    background-color: #0ba34e10;
+    color: #0BA34E;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  #nav-backdrop {
+    position: fixed;
+    top: 6.5vh; /* height of the nav */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 6.5vh);
+    background: rgba(0, 0, 0, 0.48); /* subtle white blur */
+    backdrop-filter: blur(2px);
+    z-index: 999; /* just below nav and dropdown */
+    display: none;
+    transition: all 0.3s ease;
+  }
+  
 
 
 .nav-part2 h4 {
