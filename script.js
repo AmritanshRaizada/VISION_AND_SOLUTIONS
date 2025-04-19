@@ -164,6 +164,7 @@ function page6Animations() {
   });
 }
 
+
 // Init Everything
 circleChaptaKaro();
 circleMouseFollower();
