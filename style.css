@@ -802,10 +802,12 @@ nav button:hover svg {
 }
 
 #page5-content #flex {
+    margin-left: 10px;
     display: flex;
     margin-top: 4vh;
     margin-bottom: 2vh;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    gap: 10px;
 }
 
 #page5-content #flex h4 {
@@ -819,8 +821,8 @@ nav button:hover svg {
     background: linear-gradient(to top, #4f5bff 20%, black 90%);  
     color: white;  
     border-color: #4f5bff;  
-    transform: scale(1.08);  
-    font-weight: 500;
+    transform: scale(1.05);  
+    font-weight: 700;
     opacity: 100%; }
 
 .page5-elem {
