@@ -88,12 +88,14 @@ html, body {
     justify-content: center;
     padding-bottom: 150px;
     gap: 10px;
+    width: 50vw;
+    flex-wrap: wrap;
 }
 
 #page1-something h4 {
     font-weight: 400;
     font-size: 1vw;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
     margin-top: 0.5vw;
     padding: 9px 34px;
     border: 1px solid hsl(0, 0%, 65%);
