@@ -1,83 +1,105 @@
-var timeout;
+// Loading Animation
 function loadingAnimation() {
-
-  var tl = gsap.timeline()
+  const tl = gsap.timeline();
   tl.from("#page1", {
-      opacity: 0,
-      duration: 0.2,
-      delay: 0.2
-  })
+    opacity: 0,
+    duration: 0.2,
+    delay: 0.2
+  });
   tl.from("#page1", {
-      transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
-      borderRadius: "150px",
-      duration: 1.5,
-      ease: "expo.out"
-  })
+    transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+    borderRadius: "150px",
+    duration: 1.5,
+    ease: "expo.out"
+  });
   tl.from("nav", {
-      opacity: 0,
-      delay: -0.2
-  })
+    opacity: 0,
+    delay: -0.2
+  });
   tl.from("#page1 h1, #page1 p, #page1 div", {
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.2
-  })
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.2
+  });
 }
 
-
+// Locomotive Scroll
 const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true,
 });
 
-
+// Mouse Circle Follower
+let timeout;
 function circleChaptaKaro() {
-  // define default scale value
-  var xscale = 1;
-  var yscale = 1;
-
-  var xprev = 0;
-  var yprev = 0;
+  let xscale = 1;
+  let yscale = 1;
+  let xprev = 0;
+  let yprev = 0;
 
   window.addEventListener("mousemove", function (dets) {
     clearTimeout(timeout);
-
     xscale = gsap.utils.clamp(0.8, 1.2, dets.clientX - xprev);
     yscale = gsap.utils.clamp(0.8, 1.2, dets.clientY - yprev);
-
     xprev = dets.clientX;
     yprev = dets.clientY;
 
     circleMouseFollower(xscale, yscale);
 
-    timeout = setTimeout(function () {
-      document.querySelector(
-        "#minicircle"
-      ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(1, 1)`;
+    timeout = setTimeout(() => {
+      document.querySelector("#minicircle").style.transform =
+        `translate(${dets.clientX}px, ${dets.clientY}px) scale(1, 1)`;
     }, 100);
   });
 }
 
-function circleMouseFollower(xscale, yscale) {
+function circleMouseFollower(xscale = 1, yscale = 1) {
   window.addEventListener("mousemove", function (dets) {
-    document.querySelector(
-      "#minicircle"
-    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
+    document.querySelector("#minicircle").style.transform =
+      `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
   });
 }
 
+// Navbar Hide on Scroll Down, Show on Scroll Up (Smooth)
+let lastScroll = 0;
+let navVisible = true;
+let ticking = false;
 
-circleChaptaKaro();
-circleMouseFollower();
-loadingAnimation()
+scroll.on("scroll", (obj) => {
+  const currentScroll = obj.scroll.y;
 
-// teeno element ko sleect karo, uske baad teeno par ek mousemove lagao, jab mousemove ho to ye pata karo ki mouse kaha par hai, jiska matlab hai mouse ki x and y position pata karo, ab mouse ki x y position ke badle us image ko show karo and us image ko move karo, move karte waqt rotate karo, and jaise jaise mouse tez chale waise waise rotation bhi tez ho jaye
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrollDiff = currentScroll - lastScroll;
 
+      if (Math.abs(scrollDiff) > 5) {
+        const nav = document.querySelector("nav");
+
+        if (scrollDiff > 0 && navVisible) {
+          // Scrolling down
+          nav.style.top = "-100px";
+          navVisible = false;
+        } else if (scrollDiff < 0 && !navVisible) {
+          // Scrolling up
+          nav.style.top = "0";
+          navVisible = true;
+        }
+      }
+
+      lastScroll = currentScroll;
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+
+// Image Rotate Hover Effect
 document.querySelectorAll(".elem").forEach(function (elem) {
-  var rotate = 0;
-  var diffrot = 0;
+  let rotate = 0;
+  let diffrot = 0;
 
-  elem.addEventListener("mouseleave", function (dets) {
+  elem.addEventListener("mouseleave", function () {
     gsap.to(elem.querySelector("img"), {
       opacity: 0,
       ease: Power3,
@@ -86,9 +108,10 @@ document.querySelectorAll(".elem").forEach(function (elem) {
   });
 
   elem.addEventListener("mousemove", function (dets) {
-    var diff = dets.clientY - elem.getBoundingClientRect().top;
+    let diff = dets.clientY - elem.getBoundingClientRect().top;
     diffrot = dets.clientX - rotate;
     rotate = dets.clientX;
+
     gsap.to(elem.querySelector("img"), {
       opacity: 1,
       ease: Power3,
@@ -98,11 +121,12 @@ document.querySelectorAll(".elem").forEach(function (elem) {
     });
   });
 });
+
 document.querySelectorAll(".elem1").forEach(function (elem) {
-  var rotate = 0;
-  var diffrot = 0;
+  let rotate = 0;
+  let diffrot = 0;
 
-  elem.addEventListener("mouseleave", function (dets) {
+  elem.addEventListener("mouseleave", function () {
     gsap.to(elem.querySelector("img"), {
       opacity: 0,
       ease: Power3,
@@ -111,9 +135,10 @@ document.querySelectorAll(".elem1").forEach(function (elem) {
   });
 
   elem.addEventListener("mousemove", function (dets) {
-    var diff = dets.clientY - elem.getBoundingClientRect().top;
+    let diff = dets.clientY - elem.getBoundingClientRect().top;
     diffrot = dets.clientX - rotate;
     rotate = dets.clientX;
+
     gsap.to(elem.querySelector("img"), {
       opacity: 1,
       ease: Power3,
@@ -123,18 +148,24 @@ document.querySelectorAll(".elem1").forEach(function (elem) {
     });
   });
 });
+
+// Page 6 Animation
 function page6Animations() {
   gsap.from("#btm6-part2 h4", {
-      x: 0,
-      duration: 1,
-      scrollTrigger: {
-          trigger: "#btm6-part2",
-          scroller: "#main",
-          // markers:true,
-          start: "top 80%",
-          end: "top 10%",
-          scrub: true
-      }
-  })
+    x: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#btm6-part2",
+      scroller: "#main",
+      start: "top 80%",
+      end: "top 10%",
+      scrub: true
+    }
+  });
 }
-page6Animations()
+
+// Init Everything
+circleChaptaKaro();
+circleMouseFollower();
+loadingAnimation();
+page6Animations();
