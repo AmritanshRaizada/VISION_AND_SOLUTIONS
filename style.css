@@ -936,12 +936,15 @@ nav button:hover svg {
     font-size: 0.65vw;
 }
 #page5-content #flex h4:hover {
-    background: linear-gradient(to top, #4f5bff 20%, black 90%);  
+    background: linear-gradient(to top, #4f5bff 5%, black 40%);  
     color: white;  
     border-color: #4f5bff;  
     transform: scale(1.05);  
     font-weight: 700;
-    opacity: 100%; }
+    opacity: 100%; 
+    
+}
+    
 
 .page5-elem {
     display: flex;
@@ -1008,6 +1011,7 @@ nav button:hover svg {
 
 .page5-elem:hover {
     border-top: 2px solid #fff;
+    
 }
 
 summary::marker {
@@ -1123,6 +1127,7 @@ Default styles for all screens
     .page5-elem:hover i {
         transform: scale(1.2);
         padding-right: 2vw;
+        
     }
 
     .page5-elem:hover .over {
@@ -1157,6 +1162,7 @@ Default styles for all screens
     background-color: #fffdfd;
     transition: width 0.4s ease, left 0.4s ease;
     transform: translateX(-50%);
+    
 }
 
 .product:hover::before {
