@@ -4,6 +4,7 @@
     /* font-family: "General Sans"; */
     box-sizing: border-box;
     cursor: none !important;
+    
   user-select: none !important;
 }
 a, button, .circle {
@@ -139,7 +140,7 @@ html, body {
 }
 
 
-#minicircle {
+/* #minicircle {
     pointer-events: none;
     position: fixed;
     z-index: 99999;
@@ -149,7 +150,7 @@ html, body {
     background-color: white; /* default color, but we'll blend it */
     mix-blend-mode: difference;
     transition: transform 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-  }
+  } */
   
   @media (max-width: 768px) {
     #minicircle {
