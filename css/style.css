@@ -29,7 +29,6 @@ html, body {
     font-weight: 900;
     line-height: 9vw;
     margin-bottom:5vh;
-    margin-top: 15vh;
 }
 #hero h1 span {
     display: inline-block;
@@ -60,7 +59,6 @@ html, body {
 #hero h1 svg {
     height: 5vw;
     width: 5vw;
-    margin-bottom:1vh;
     border-radius: 50%;
     background-color: #DB0B15;
     transition: all 0.4s ease; /* smooth by default */
@@ -140,6 +138,7 @@ html, body {
     transform: scale(1.08);
 }
 
+  
   @media (max-width: 768px) {
     #minicircle {
         display: none !important;
@@ -193,7 +192,7 @@ html, body {
 
 /* Optional hover effect */
 .logo-img:hover {
-    transform: scale(1.18);
+    transform: scale(1.25);
 }
 nav {
     position: fixed;
@@ -221,7 +220,7 @@ nav {
     padding: 1vh 0;
     position: relative;
     z-index: 10;
-    margin-left: 30vw;
+    margin-left: 36vw;
 }
 
 
@@ -289,12 +288,13 @@ nav {
 
 
 .nav-part2 h4 {
-    font-size: 0.93vw;
+    font-size: 0.73vw;
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 2.6vw;
     padding: 0.5vw;
     color: #000000;
+    
     transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
     position: relative;
 }
@@ -403,6 +403,10 @@ nav button:hover svg {
     transform: scale(1.3) rotate(10deg);
 }
 
+
+
+
+  
 #moving-div {
     margin-top: 10vh;
     position: absolute;
@@ -1055,13 +1059,29 @@ nav button:hover svg {
   .contact-block h3 {
     font-size: 1rem;
   }
+  
+  /* #footer-right {
+    display: flex;
+    gap: 25px;
+  }
+  
+  #footer-right a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  } */
 
-    .footer-section .heading
-    {
-     color:white;
-     font-size:40px;
-     font-weight:700;
-    }
+
+
+    /* #page7 {
+    font-family: sans-serif; 
+    box-sizing:border-box;
+    height: max-content;
+    width: 100%;
+    background-color: #0c0c0c;
+    } */
+  
 .footer-section
 {
  padding:4vh 4vw;
@@ -1073,6 +1093,12 @@ nav button:hover svg {
  color:white;
 }
 
+.footer-section .heading
+{
+ color:white;
+ font-size:40px;
+ font-weight:700;
+}
 
 .footer-section button
 {
@@ -1090,14 +1116,7 @@ nav button:hover svg {
   margin-top:24vh;
   background:black;
 }
-.footer-copyright {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(203, 99, 99, 0.5);
-    max-width: 1200px;
-    margin-left:9vw;
-  }
+
 
 .product-service button
 {
@@ -1217,6 +1236,29 @@ nav button:hover svg {
   border-top: 2px solid #fff;
 }
 
+    
+    /* .contact
+    {
+      padding:4vh 4vw;
+    }
+    
+    .contact h1
+    {
+      font-size:70px;
+      margin-top:150px;
+      font-weight:700;
+    
+    }
+      */
+    /* .contact form
+    {
+      background:white;
+      margin-top:100px;
+      border-radius:20px;
+      padding:8vh 3vw;
+    }
+     */
+	 
 	 #page5 {
     min-height: 100vh;
     background-color: #000000;
