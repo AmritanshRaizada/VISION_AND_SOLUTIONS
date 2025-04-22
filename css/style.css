@@ -749,7 +749,7 @@ nav button:hover svg {
     background: #4f5bff;
     background-size: 100% 200%;
     background-position: bottom;
-    width: 15vw;
+    width: 16vw;
     height: 3.5vw;
     
     border-radius: 100px;
@@ -768,9 +768,10 @@ nav button:hover svg {
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     position: absolute;
+    padding-top: 10px;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.85vw;
+    font-size: 1.1vw;
     color: white;
     display: flex;
     align-items: center;
@@ -779,8 +780,8 @@ nav button:hover svg {
 }
 
 #blue-btn h4 i {
-    font-size: 1vw;
-    font-weight: 100;
+    font-size: 1.5vw;
+        font-weight: 100;
     margin-left: 0.5vw;
     color: white;
     transition: transform 0.3s ease, color 0.3s ease;
