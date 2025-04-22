@@ -1518,7 +1518,7 @@ Default styles for all screens
     display: inline-block; /* or block if needed */
     overflow: hidden;
     padding: 3vh 0;
-    width: 50vw;
+    width: 60vw;
     border-top: 1px solid #333;
 }
 
