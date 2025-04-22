@@ -969,13 +969,13 @@ nav button:hover svg {
   .flex-box {
     background-color: #ffffff;
     color: #333;
-    width: 320px;
-    padding: 30px 20px;
+    width: 350px;
+    padding: 35px 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.3s ease;
-  }
+}
   
   .flex-box:hover {
     transform: translateY(-5px);
