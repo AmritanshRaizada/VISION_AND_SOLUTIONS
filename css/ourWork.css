@@ -295,7 +295,14 @@ nav button:hover svg {
  padding:1vh 1vw;
  margin-top:10px;
 }
-
+.footer-copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .our-clients svg
 {
