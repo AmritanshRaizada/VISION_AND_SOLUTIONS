@@ -165,7 +165,67 @@ padding-right: 3vw;
   display: none;
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  /* Hide everything else */
+  .nav-part2,
+  .nav-elem,
+  .dropdown,
+  .dropdown-menu,
+  .hamburger,
+  #nav-bottom {
+      display: none !important;
+  }
 
+  /* Style nav layout */
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5vh 5vw;
+  }
+
+  /* Show only logo */
+  .logo-container {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo-img {
+      width: 14vw;
+      height: 4vh;
+      margin-bottom: 1vh;
+  }
+
+  /* Show and style the button */
+  nav button {
+      font-size: 2.5vw;
+      padding: 5px 10px;
+      margin-bottom: 1vh;
+  }
+
+  nav button svg {
+      height: 4vw;
+      margin-left: 2vw;
+  }
+}
+
+
+nav button:hover {
+  background-color: #302f2f;
+}
+
+nav button svg {
+  height: 1.1vw;
+  margin-left: 0.6vw;
+  transition: all 0.4s ease; /* Make sure the default state has transition too */
+}
+
+nav button:hover svg {
+  
+  transform: scale(1.3) rotate(10deg);
+}
 
 
 .nav-part2 h4 {
