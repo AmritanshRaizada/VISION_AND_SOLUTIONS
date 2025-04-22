@@ -1331,7 +1331,7 @@ nav button:hover svg {
 .page5-elem p {
     font-weight: 100;
     width: 50%;
-    font-size: 0.7vw;
+    font-size: 1vw;
     position: relative;
     z-index: 8;
     margin-left: 10vw;
