@@ -445,6 +445,9 @@ nav button {
     font-weight: 700;
     color: var(--white);
   }
+  .footer pre{
+    font-size:.8vw;
+  }
   
   .footer-links, .footer-social {
     display: flex;

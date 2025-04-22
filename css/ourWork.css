@@ -267,6 +267,10 @@ nav button:hover svg {
   gap: 50px;
   flex-wrap: wrap;
 }
+.footer-section pre{
+  color:white;
+}
+
 .footer-section
 {
  padding:4vh 4vw;
@@ -281,7 +285,7 @@ nav button:hover svg {
 .footer-section .heading
 {
  color:white;
- font-size:40px;
+ font-size:30px;
  font-weight:700;
 }
 
