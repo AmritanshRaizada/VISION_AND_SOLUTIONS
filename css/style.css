@@ -1300,9 +1300,9 @@ nav button:hover svg {
 #page5-content #flex h4 {
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 8px 10px;
+    padding: 8px 16px;
     font-weight: 700;
-    font-size: 0.65vw;
+    font-size: 0.98vw;
 }
 #page5-content #flex h4:hover {
     background: linear-gradient(to top, #4f5bff 5%, black 40%);  
