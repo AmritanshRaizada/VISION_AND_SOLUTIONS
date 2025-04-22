@@ -1,0 +1,625 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy, sans-serif;
+  }
+
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
+  
+nav h2
+{
+  margin-top: 1vh;
+    font-weight:700;
+    padding:0vh 2vw;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    margin-top: 0.4vh;
+    height: 6vh; /* Increased from 2vw */
+    margin-bottom: 100vh;
+    width: 5vw;
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.logo-img:hover {
+    transform: scale(1.25);
+}
+nav {
+    position: fixed;
+    top: 0; /* Essential for animation */
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    height: 8.5vh;
+    width: 100%;
+    padding: 1vh 10vw;
+    justify-content: space-between;
+    background-color: #ffffff;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+
+.nav-part2 {
+    display: flex;
+    gap:0.8vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+    margin-left: 36vw;
+}
+
+
+.nav-elem {
+    position: relative;
+    cursor: pointer;
+}
+/* Dropdown base style */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 4.5vw;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 1vw;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 0.5vw;
+    z-index: 999;
+    width: max-content;
+    min-width: 15vw;
+  }
+  
+  .dropdown-menu p {
+    font-size: 0.73vw;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.3vw 2vw;
+	padding-right: 3vw;
+    white-space: nowrap;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  
+  .dropdown-menu p:hover {
+    background-color: #0ba34e10;
+    color: #0BA34E;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  #nav-backdrop {
+    position: fixed;
+    top: 6.5vh; /* height of the nav */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 6.5vh);
+    background: rgba(0, 0, 0, 0.48); /* subtle white blur */
+    backdrop-filter: blur(2px);
+    z-index: 999; /* just below nav and dropdown */
+    display: none;
+    transition: all 0.3s ease;
+  }
+  
+
+
+.nav-part2 h4 {
+    font-size: 0.73vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 2.6vw;
+    padding: 0.5vw;
+    color: #000000;
+    
+    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
+    position: relative;
+}
+
+/* Hover effect */
+.nav-part2 h4:hover {
+    transform: translateY(-2px); /* slight lift effect */
+    text-shadow: 0 2px 4px rgba(11, 163, 78, 0.2);
+    color: #0BA34E;
+}
+
+/* Optional: Underline animation */
+.nav-part2 h4::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 1.5vw;
+    left: 50%;
+    background-color: #0BA34E;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-part2 h4:hover::after {
+    width: 80%;
+}
+
+
+nav button {
+    margin-top: 1vh;
+    background-color: #0BA34E;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+nav button:hover {
+  background-color: #302f2f;
+}
+
+nav button svg {
+  height: 1.1vw;
+  margin-left: 0.6vw;
+  transition: all 0.4s ease; /* Make sure the default state has transition too */
+}
+
+nav button:hover svg {
+  
+  transform: scale(1.3) rotate(10deg);
+}
+.footer
+{
+  background:black;
+  color:white;
+}
+
+.hr-line 
+{
+ border-top:1px solid #666666; 
+} 
+  
+.footer-section .heading1
+{
+ margin-top:20px;
+ color:#ffffff66; 
+}
+
+
+.footer {
+ position: relative;
+ padding:4vh 4vw;
+}
+
+.footer .cursor3 {
+ height: 120px;
+ width: 120px;
+ position: fixed; 
+ top: 0;
+ left: 0;
+ transform: translate(-50%, -50%); 
+ z-index: 999;
+ background-color: #0da34e;
+ border-radius: 50%;
+ opacity: 0;
+ pointer-events: none; 
+ color: white;
+ justify-content: center;
+ align-items: center;
+ font-weight: bold;
+}
+
+
+.footer h1
+{
+ font-size:60px;
+ font-weight:700;
+}
+
+.footer p 
+{
+ color: #ffffff66;
+}
+
+.footer button
+{
+ background:black;
+ color:white;
+ border-radius:100px;
+ padding:10px;
+ font-size:10px;
+ border:1px solid white;
+}
+
+
+.footer-section
+{
+ padding:4vh 4vw;
+ background:black;
+ color:white;
+}
+
+.footer-section p
+{
+ color:white;
+}
+
+.footer-section .heading
+{
+ color: #ffffff66;
+}
+
+.footer-section button
+{
+ background:black;
+ color:white;
+ font-size:11px;
+ border:1px solid white;
+ border-radius:100px;
+ padding:1vh 1vw;
+ margin-top:10px;
+}
+
+
+
+.our-clients svg
+{
+  width:30px;
+}
+
+.our-clients .star
+{
+  width:80px;
+}
+
+.our-clients .svgs
+{
+  display:flex;
+  padding:2vh 2vw;
+}
+
+.our-clients .card
+{
+  background: #f5f5f5;
+  border-radius:10px;
+  border:none;
+  /* margin-right:95px; */
+}
+
+.our-clients .para
+{
+  color:gray;
+  padding:2vh 4vw;
+}
+
+
+.our-clients h1
+{
+  font-size:70px;
+  font-weight:700;
+}
+
+.our-clients p 
+{
+  font-size:18px;
+  margin-left:40px;
+}
+
+.our-clients span
+{
+  font-weight:700;
+  margin-left:35px;
+  font-size:18px;
+}
+
+.our-clients .image
+{
+  display:flex;
+  align-items:center;
+}
+
+.our-clients .image h3
+{
+  font-size:20px;
+  font-weight:700;
+}
+
+
+.our-clients .image h4
+{
+  font-size:16px;
+  color:rgb(62, 61, 61);
+  margin-top:60px;
+  margin-left:-110px;
+}
+
+
+
+.our-clients .image img
+{
+  display:flex;
+  width:60px;
+  border-radius:50%;
+  margin-left:35px;
+}
+
+.section-3
+{
+  background:#111111;
+}
+
+
+.section-3 .funding
+{
+  color:#a3a3a3;
+  padding:9vh 4vw;
+}
+
+
+.section-3 p
+{
+  color:#a3a3a3;
+  font-size:15px;
+  align-items:center;
+  display:flex;
+}
+
+
+.section-3 h2
+{
+  color:#fff;
+  font-size:70px;
+  margin-top:50px;
+  font-weight:700;
+}
+
+
+
+.horizontal-line
+{
+  border-top:1px solid #666666;
+}
+
+.about-us 
+{
+  background:#111111;
+}
+
+.about-us p
+{
+  color:#a3a3a3;
+  padding:14vh 4vw;
+}
+
+
+.about-us h1
+{
+  color:white;
+  font-size:60px;
+  font-weight:700;
+  line-heading:1;
+  padding:9vh 4vw;
+}
+
+.section-cards 
+{
+  background:#111111;
+  padding:4vh 4vw;
+}
+
+
+.section-cards .section-card1
+{
+  /* border:1px solid white; */
+  color:#a3a3a3;
+  border-radius:10px;
+  /* background:pink; */
+  background: #1f1f1f;
+}
+
+.section-card1 h1
+{
+  color: white;
+  font-size:50px;
+  font-weight:700;
+  margin-top:20vh;
+  margin-left:25px;
+}
+
+.section-card1 p
+{
+  padding:2vh 2vw;
+  color: white;
+}
+.section-card1 h3
+{
+  font-size:20px;
+  padding:2vh 2vw;
+  color: #a3a3a3;
+}
+
+.awards
+{
+  background: #111111;
+  padding:16vh 4vw;
+}
+
+.awards h2
+{
+  color:white;
+  font-size:60px;
+  font-weight:700;
+}
+
+.awards p
+{
+ color:#a3a3a3;
+}
+
+.multicards
+{
+  padding:4vh 4vw;
+  background:#111111;
+  color:white;
+}
+
+
+
+.multicard1 
+{
+  background:#1f1f1f;
+  border-radius:10px;
+  padding-bottom:1vh;
+}
+
+.multicard1  p
+{
+
+  margin-bottom:30px;
+}
+
+.multicard1 svg
+{
+  width:180px;
+}
+
+.outcomes-cards
+{
+  padding:4vh 2vw;
+}
+
+.outcomes-cards svg
+{
+  width:300px;
+  padding-right:150px;
+  margin-top:2vh;
+  margin-left:2vh;
+}
+
+.outcomes-cards img
+{
+  width:300px;
+  /* padding-right:150px; */
+  margin-top:1vh;
+  margin-left:2vh;
+}
+
+.outcomes-cards1 
+{
+  border:1px solid #d3d3d3;
+}
+
+.outcomes-cards1 p
+{
+  margin-top:12vh;
+  color:#666666;
+  margin-left:2vh; 
+}
+
+.outcomes-cards1 h1
+{
+  font-size:80px;
+  font-weight:700;
+  padding:2vh 2vw;
+}
+
+.outcomes-cards1 h3
+{
+  font-weight:700;
+  padding:2vw;
+}
+
+.outcomes-cards1 h5
+{
+font-size:16px;
+margin-left:30px;
+}
+
+.outcomes
+{
+  padding:10vh 4vw;
+}
+
+.outcomes p
+{
+  color:#666666;
+  margin-left:10px;
+}
+
+.outcomes h1
+{
+  font-size:50px;
+  font-weight:700;
+
+}
+
+.results
+{
+  padding:10vh 4vw;
+}
+
+.results p 
+{
+  color:#666666;
+}
+
+.results h2
+{
+  font-size:80px;
+  font-weight:700;
+  margin-bottom:60px;
+}
+
+.results svg
+{
+  width:260px;
+  margin-top:30px;
+}
+
+.results img
+{
+  width:260px;
+  margin-top:30px;
+}
+
+.results h1
+{
+  font-size:70px;
+  font-weight:700;
+  margin-top:15px;
+}
+
+.results h3
+{
+  margin-top:40px;
+  font-weight:700;
+}
