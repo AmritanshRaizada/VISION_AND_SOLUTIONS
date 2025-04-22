@@ -22,6 +22,7 @@ html, body {
 
 
 #hero h1 {
+    padding-top: 10vh;
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     font-size: 6.5vw;
@@ -1064,8 +1065,9 @@ nav button:hover svg {
   
 .footer-section
 {
+    padding-top: 10vh;
  padding:4vh 4vw;
- background:black;
+ background:rgb(28, 28, 28);
 }
 
 .footer-section p
@@ -1082,7 +1084,7 @@ nav button:hover svg {
 
 .footer-section button
 {
- background:black;
+    background:rgb(28, 28, 28);
  color:white;
  font-size:11px;
  border:1px solid white;
