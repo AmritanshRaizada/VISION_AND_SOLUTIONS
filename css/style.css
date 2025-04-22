@@ -1047,6 +1047,9 @@ nav button:hover svg {
     gap: 50px;
     flex-wrap: wrap;
   }
+  .footer-section pre{
+    color:white;
+  }
   
   .contact-block h5 {
     font-size: 0.9rem;
@@ -1075,7 +1078,7 @@ nav button:hover svg {
 .footer-section .heading
 {
  color:white;
- font-size:40px;
+ font-size:30px;
  font-weight:700;
 }
 
@@ -1089,6 +1092,22 @@ nav button:hover svg {
  padding:1vh 1vw;
  margin-top:10px;
 }
+.col-sm-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .col-sm-3 {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+  }
+  
+  .col-sm-3:hover {
+    color: var(--accent-color);
+  }
+  
 
 .product-service 
 {
