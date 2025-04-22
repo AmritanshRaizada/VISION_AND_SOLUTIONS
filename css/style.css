@@ -378,6 +378,12 @@ nav button {
         height: 4vw;
         margin-left: 2vw;
     }
+    nav button {
+        font-size: 2.5vw;
+        padding: 5px 10px;
+        margin-bottom: 1vh;
+    }
+    
 }
 
 
@@ -394,13 +400,6 @@ nav button svg {
 nav button:hover svg {
     
     transform: scale(1.3) rotate(10deg);
-}
-@media (max-width: 768px) {
-    nav button {
-        font-size: 2.5vw;
-        padding: 5px 10px;
-        margin-bottom: 1vh;
-    }
 }
 
 
