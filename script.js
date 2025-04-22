@@ -173,18 +173,22 @@ dropdown.addEventListener("mouseenter", () => {
 dropdown.addEventListener("mouseleave", () => {
   backdrop.style.display = "none";
 });
-var sections = document.querySelectorAll(".sec-right")
+var sections = document.querySelectorAll(".sec-right");
 
-    sections.forEach(function (elem) {
-        elem.addEventListener("mouseenter", function () {
-            elem.childNodes[3].style.opacity = 1
-            elem.childNodes[3].play()
-        })
-        elem.addEventListener("mouseleave", function () {
-            elem.childNodes[3].style.opacity = 0
-            elem.childNodes[3].load()
-        })
-    })
+sections.forEach(function (elem) {
+    const video = elem.querySelector("video");
+
+    elem.addEventListener("mouseenter", function () {
+        video.style.opacity = "1";
+        video.play();
+    });
+
+    elem.addEventListener("mouseleave", function () {
+        video.style.opacity = "0";
+        video.load(); // resets the video
+    });
+});
+
 
 // Init Everything
 circleChaptaKaro();
