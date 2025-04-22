@@ -59,6 +59,7 @@ html, body {
 #hero h1 svg {
     height: 5vw;
     width: 5vw;
+    margin-bottom: 10px;
     border-radius: 50%;
     background-color: #DB0B15;
     transition: all 0.4s ease; /* smooth by default */
