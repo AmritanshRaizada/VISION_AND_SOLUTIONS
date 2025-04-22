@@ -1,10 +1,13 @@
+require('dotenv').config(); // Load environment variables
+
 const express = require('express');
 const fs = require('fs');
 const multer = require('multer');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const app = express();
-const port = 3000;
+
+const port = process.env.PORT || 3000;
 
 const upload = multer();
 app.use(cors());
@@ -28,13 +31,13 @@ app.post('/submit-form', upload.none(), async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'dheerajkumar8179@gmail.com',     // Your email
-                pass: 'swau iqrl yqiz uigs'      // Your App password
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS
             }
         });
 
         const mailOptions = {
-            from: 'dheerajkumar8179@gmail.com',
+            from: process.env.EMAIL_USER,
             to: [
                 'amritansh.pvt@gmail.com',
                 'info@visionandsolutions.com',
