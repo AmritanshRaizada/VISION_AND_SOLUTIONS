@@ -426,7 +426,7 @@ nav button:hover svg {
   color:white;
   font-size:60px;
   font-weight:700;
-  line-heading:1;
+  /* line-heading:1; */
   padding:9vh 4vw;
 }
 

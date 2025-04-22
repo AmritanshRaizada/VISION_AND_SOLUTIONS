@@ -250,9 +250,10 @@ nav button {
   }
   
   .contact-hero h1 {
+    margin-top: 50px;
     font-size: 64px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     line-height: 1.2;
     color: var(--white); /* White text for better contrast */
   }

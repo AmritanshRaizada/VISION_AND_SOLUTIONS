@@ -1,0 +1,28 @@
+{
+  "name": "vision_and_solutions",
+  "version": "1.0.0",
+  "main": "ourWork.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmritanshRaizada/VISION_AND_SOLUTIONS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmritanshRaizada/VISION_AND_SOLUTIONS/issues"
+  },
+  "homepage": "https://github.com/AmritanshRaizada/VISION_AND_SOLUTIONS#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^1.4.5-lts.2",
+    "nodemailer": "^6.10.1"
+  },
+  "description": ""
+}
